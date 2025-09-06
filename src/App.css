@@ -1,12 +1,29 @@
 /* ----------------------------------- GLOBALS -----------------------------------*/
+:root {
+  /* Typographie */
+  --font-base: "Inter", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+
+  /* Espacements */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 2rem; /* 32px */
+  --spacing-xl: 4rem; /* 64px */
+}
+
 body {
   font-family: Inter, sans-serif;
 }
 
-.container,
-.home {
+.container {
   width: 1280px;
   margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 a {
@@ -14,56 +31,237 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: black;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
 h1 {
   font-size: 24px;
-  font-weight: bold;
+  text-align: center;
+  margin: 30px;
+  border-bottom: 2px solid red;
+}
+
+h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 article:hover {
   cursor: pointer;
 }
 
-/* ----------------------------------- HEADER -----------------------------------*/
-
-header img {
-  width: 80px;
+.favorite-message {
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border: 2px solid red;
+  border-radius: 6px;
+  margin: 10px auto;
+  width: fit-content;
+  animation: fadeOut 2s forwards;
+  position: fixed;
+  z-index: 99;
 }
 
-header .container {
-  height: 80px;
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ----------------------------------- HEADER & FOOTER -----------------------------------*/
+header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #b30000, #000000);
+
+  text-align: center;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+footer .container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   border-bottom: 1px solid lightgrey;
 }
 
-header ul {
+footer a,
+header a {
+  height: 80px;
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-/* ----------------------------------- HOME -----------------------------------*/
+footer img,
+header img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
 
-.home {
+header ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  margin: 20px;
 }
 
-.home article {
-  width: 200px;
-  border: 1px solid red;
+.hero-header {
+  position: relative;
+  height: 60vh;
+  background-image: url("https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* ⚡ Mets ton image ici */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-header .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.hero-header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* ----------------------------------- MAIN -----------------------------------*/
+
+.container article {
+  /* height: 450px; */
+  width: 210px;
+  border: 2px solid red;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 10px;
-  text-align: justify;
+  /* padding: 10px; */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
+article img {
+  width: 100%;
+}
 
+.favoriteButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: red;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
+.article-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* ----------------------------------- SEARCHBAR -----------------------------------*/
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.searchBar input {
+  width: 600px;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  background: #1f2937;
+  color: white;
+}
+
+/* ----------------------------------- PAGINATION -----------------------------------*/
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  gap: 50px;
+}
+
+.pagination button {
+  width: 110px;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+}
+
+.onglets {
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 10px;
+  background: #1f2937;
+  color: white;
+  cursor: pointer;
+}
+
+/* ----------------------------------- RESPONSIVE -----------------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+}

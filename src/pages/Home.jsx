@@ -46,7 +46,7 @@ const Home = ({ name, setName }) => {
       try {
         // Requête vers le backend
         const response = await axios.get(
-          `http://localhost:3000/characters${filters}`
+          `https://p01--velmar-backend--mjzb7kybbk2h.code.run/characters${filters}`
         );
 
         // Mise à jour du state "data" avec les données reçues

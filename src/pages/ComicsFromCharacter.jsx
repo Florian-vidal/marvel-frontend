@@ -44,7 +44,7 @@ const ComicsFromCharacter = () => {
 
         // Appel API pour récupérer les comics liés à un personnage précis
         const response = await axios.get(
-          `http://localhost:3000/comics/${id}${filters}`
+          `https://p01--velmar-backend--mjzb7kybbk2h.code.run/comics/${id}${filters}`
         );
 
         // Mise à jour du state avec les données reçues

@@ -90,7 +90,7 @@ const Comics = () => {
 
         // Appel API pour récupérer les comics
         const response = await axios.get(
-          `http://localhost:3000/comics${filters}`
+          `https://p01--velmar-backend--mjzb7kybbk2h.code.run/comics${filters}`
         );
 
         // On stocke les données reçues dans le state

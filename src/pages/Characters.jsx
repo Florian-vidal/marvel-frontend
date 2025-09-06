@@ -92,7 +92,7 @@ const Characters = () => {
 
         // Appel API pour récupérer les personnages
         const response = await axios.get(
-          `http://localhost:3000/characters${filters}`
+          `https://p01--velmar-backend--mjzb7kybbk2h.code.run/characters${filters}`
         );
 
         setData(response.data);

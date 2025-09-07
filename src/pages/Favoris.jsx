@@ -64,7 +64,7 @@ const Favorites = () => {
           </div>
         ) : (
           // Message affiché si aucun personnage en favori
-          <p>Aucun personnage en favori.</p>
+          <p className="favori-none">Aucun personnage en favori.</p>
         )}
       </section>
 
@@ -93,7 +93,7 @@ const Favorites = () => {
           </div>
         ) : (
           // Message affiché si aucun comic en favori
-          <p>Aucun Comic en favori.</p>
+          <p className="favori-none">Aucun Comic en favori.</p>
         )}
       </section>
     </main>

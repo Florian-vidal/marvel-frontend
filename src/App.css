@@ -4,14 +4,6 @@
   --font-base: "Inter", sans-serif;
   --font-heading: "Poppins", sans-serif;
 
-  /* Espacements */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 2rem; /* 32px */
-  --spacing-xl: 4rem; /* 64px */
-}
-
 body {
   font-family: Inter, sans-serif;
 }
@@ -53,23 +45,6 @@ h1 {
 h2 {
   font-size: 18px;
   text-align: center;
-}
-
-article:hover {
-  cursor: pointer;
-}
-
-.favorite-message {
-  background: #333;
-  color: #fff;
-  padding: 8px 12px;
-  border: 2px solid red;
-  border-radius: 6px;
-  margin: 10px auto;
-  width: fit-content;
-  animation: fadeOut 2s forwards;
-  position: fixed;
-  z-index: 99;
 }
 
 @keyframes fadeOut {
@@ -190,6 +165,20 @@ article img {
   width: 100%;
 }
 
+.article-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+article:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------- FAVORIS -----------------------------------*/
+
 .favoriteButton {
   background: none;
   border: none;
@@ -202,12 +191,21 @@ article img {
   right: 20px;
 }
 
-.article-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  gap: 10px;
+.favori-none {
+  text-align: center;
+}
+
+.favorite-message {
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border: 2px solid red;
+  border-radius: 6px;
+  margin: 10px auto;
+  width: fit-content;
+  animation: fadeOut 2s forwards;
+  position: fixed;
+  z-index: 99;
 }
 
 /* ----------------------------------- SEARCHBAR -----------------------------------*/

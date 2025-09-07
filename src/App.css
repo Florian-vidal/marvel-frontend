@@ -40,7 +40,6 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: black;
-  margin-bottom: var(--spacing-md);
   line-height: 1.2;
 }
 
@@ -54,7 +53,6 @@ h1 {
 h2 {
   font-size: 18px;
   text-align: center;
-  margin-top: 30px;
 }
 
 article:hover {
@@ -209,6 +207,7 @@ article img {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  gap: 10px;
 }
 
 /* ----------------------------------- SEARCHBAR -----------------------------------*/

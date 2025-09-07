@@ -9,6 +9,17 @@ const Favorites = () => {
   // State pour stocker les comics favoris
   const [comics, setComics] = useState([]);
 
+  const shorteringString = (str) => {
+    if (!str) {
+      return "Pas de description disponible";
+    }
+    if (str.length > 30) {
+      return str.slice(0, 30) + "...";
+    } else {
+      return str;
+    }
+  };
+
   useEffect(() => {
     // On récupère les favoris stockés dans le localStorage
     const savedCharacters =

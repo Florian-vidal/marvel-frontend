@@ -23,12 +23,14 @@ const Favorites = () => {
 
   return (
     <main>
-      {/* Titre principal */}
-      <section>
       <HeroHeader
         title="Ta collection de favoris"
         subtitle="Accéde à tes personnages et tes comics préférés !"
       />
+      {/* Titre principal */}
+       <h1>Personnages</h1>
+      <section>
+      
         {characters.length > 0 ? (
           <div className="container">
             {characters.map((character) => (
@@ -53,7 +55,7 @@ const Favorites = () => {
       </section>
 
       {/* Favoris Comics */}
-      <h2>Comics</h2>
+      <h1>Comics</h1>
       <section>
         {comics.length > 0 ? (
           <div className="container">

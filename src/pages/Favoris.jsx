@@ -44,7 +44,10 @@ const Favorites = () => {
                   }
                   alt={"image de " + character.name}
                 />
-                <h3>{character.name}</h3>
+                <div className="article-details">
+                  <h2>{character.name}</h2>
+                  <p>{shorteringString(character.description)}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -70,7 +73,10 @@ const Favorites = () => {
                   }
                   alt={"image de " + comic.title}
                 />
-                <h3>{comic.title}</h3>
+                <div className="article-details">
+                  <h2>{comic.title}</h2>
+                  <p>{shorteringString(comic.description)}</p>
+                </div>
               </article>
             ))}
           </div>
